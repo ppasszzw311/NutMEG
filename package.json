@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    // "npm run start": "node app.js",
-    // "npm run dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +19,7 @@
   "homepage": "https://github.com/ppasszzw311/NutMEG#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.4"
+    "express-handlebars": "^5.3.4",
+    "nodemon": "^2.0.13"
   }
 }
