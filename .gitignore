@@ -1,4 +1,4 @@
 # npm 安裝包
-node_modules
-*~
+#node_modules
+#*~
 .DS_Store
