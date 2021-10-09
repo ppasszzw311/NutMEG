@@ -1,7 +1,7 @@
 {
   "name": "nutmeg",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is javascript work",
   "main": "app.js", 
   "scripts": {
     "start": "node app.js",

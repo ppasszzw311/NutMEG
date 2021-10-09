@@ -1,13 +1,16 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 
+// set port
+const port = process.env.port || '8080'
+
 // set app
 const app = express()
+app.set('port', port)
 
 const menu = require('./lib/handlers')
 
-// set port
-const port = process.env.port || 3000
+
 
 // set engine
 app.engine('handlebars', exphbs({
