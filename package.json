@@ -1,0 +1,26 @@
+{
+  "name": "nutmeg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    // "npm run start": "node app.js",
+    // "npm run dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppasszzw311/NutMEG.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ppasszzw311/NutMEG/issues"
+  },
+  "homepage": "https://github.com/ppasszzw311/NutMEG#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4"
+  }
+}
