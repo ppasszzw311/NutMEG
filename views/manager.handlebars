@@ -9,16 +9,16 @@
           <a class="nav-link active" aria-current="page" href="#">庫存管理</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./page2.html">業績查詢與商品排行</a>
+          <a class="nav-link" href="manager/saleRank">業績查詢與商品排行</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./page3.html">月報表</a>
+          <a class="nav-link" href="manager/monlyReport">月報表</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./page4.html">商品資料編輯</a>
+          <a class="nav-link" href="manager/itemData">商品資料編輯</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./page5.html">錯誤班表修正</a>
+          <a class="nav-link" href="manager/errorfix">錯誤班表修正</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/">回使用者頁面</a>
@@ -30,8 +30,8 @@
         <p class="h4 text-body">庫存查詢</p>
       </div>
       <div class="row d-flex justify-content-center">
-        <form action="post" class="search-bar d-flex justify-content-center align-items-center">
-          <div>
+        <form action="get" class="search-bar d-flex justify-content-center align-items-center">
+          <div class="col-6 px-3">
             <label for="selectstore" class="form-label">選擇分店</label>
             <select class="form-select" name="store" id="store" aria-label="select example1">
               <option selected>選擇分店</option>
@@ -40,9 +40,9 @@
               <option value="3">永和</option>
             </select>
           </div>
-          <div>
-            <label for="selectitem" class="form-label">商品類別</label>
-            <select calss="form-select" name="item1" id="item1" aria-label="select example2">
+          <div class="col-6 px-3">
+            <label for="selectstore" class="form-label">選擇商品類別</label>
+            <select class="form-select" name="store" id="store" aria-label="select example1">
               <option selected>選擇類別</option>
               <option value="1">檳榔</option>
               <option value="2">香菸</option>
