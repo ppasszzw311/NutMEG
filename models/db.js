@@ -1,6 +1,6 @@
 const mysql = require('mysql')
 
-const PORT = 5432
+const PORT = 3306
 
 // create a connection pool
 var con = mysql.createConnection({
@@ -11,10 +11,10 @@ var con = mysql.createConnection({
 })
 
 // open the mysql connection
-con.connect(error => {
-  if (error) throw error;
+con.connect((function(err) {
+  if (err) throw err;
   console.log('success connected to the database')
-});
+}));
 
 
 // export
