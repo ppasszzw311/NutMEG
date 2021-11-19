@@ -1,16 +1,21 @@
-// use the mariadb node.js connector
-var mariadb = require('mariadb')
+const mysql = require('mysql')
+
+const PORT = 5432
 
 // create a connection pool
-var pool = mariadb.createPool({
-  host: 'localhost',
-  port: 3306,
-  user: 'app_user',
-  password: '1234',
-  database: 'nutMeg'
+var con = mysql.createConnection({
+  host: "34.81.192.26",
+  user: "nut_user",
+  password: "Evali9295",
+  database: "bndb"
 })
 
-// expose a method to establish connection with MariaDB SkySQL 
-module.exports = Object.freeze({
-  pool: pool
-})
+// open the mysql connection
+con.connect(error => {
+  if (error) throw error;
+  console.log('success connected to the database')
+});
+
+
+// export
+module.exports = con;
