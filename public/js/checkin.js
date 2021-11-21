@@ -14,7 +14,7 @@ number.addEventListener("click", e => {
     id_n = id_n.substring(0, id_n.length - 1)
   } else if (a === "刪除") {
     id_n = ""
-  }
+  } 
   id.value = id_n
   numberid.innerHTML = `員工編號：${id_n}`
 })
