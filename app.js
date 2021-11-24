@@ -93,10 +93,10 @@ app.get('/api/getCurrentWorkShiftId/:store_id', (req, res) => {
 })
 
 
-app.post('/login', (req, res) => {
-  console.log('req.body', req.body)
-  res.render('home')
-})
+// app.post('/login', (req, res) => {
+//   console.log('req.body', req.body)
+//   res.render('home')
+// })
 
 // 自訂404
 app.use(menu.notFound)
