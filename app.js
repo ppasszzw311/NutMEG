@@ -91,7 +91,7 @@ app.get('/api/getCurrentWorkShiftId/:store_id', (req, res) => {
     res.json(result)
   })
 })
-
+   
 
 // app.post('/login', (req, res) => {
 //   console.log('req.body', req.body)
