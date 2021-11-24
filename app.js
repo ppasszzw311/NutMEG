@@ -83,14 +83,14 @@ app.get('/manager/record', menu.record)
 
 
 // api for 明勳
-app.get('/api/getCurrentWorkShiftId/:store_id', (req, res) => {
-  const store_id = req.params.store_id
-  const sql = 'SELECT c.user_id,c.store_id, c.class,u.name,c.shift_id FROM bndb.check_in  as c left join bndb.users as u on c.user_id =u.id and c.store_id=u.store_id left join bndb.workshift as w on c.shift_id=w.shift_id where c.store_id= ? and c.shift_id is null order by c.created_at desc limit 1';
-  db.query(sql, [store_id], function (err, result) {
-    if (err) throw err;
-    res.json(result)
-  })
-})
+// app.get('/api/getCurrentWorkShiftId/:store_id', (req, res) => {
+//   const store_id = req.params.store_id
+//   const sql = 'SELECT c.user_id,c.store_id, c.class,u.name,c.shift_id FROM bndb.check_in  as c left join bndb.users as u on c.user_id =u.id and c.store_id=u.store_id left join bndb.workshift as w on c.shift_id=w.shift_id where c.store_id= ? and c.shift_id is null order by c.created_at desc limit 1';
+//   db.query(sql, [store_id], function (err, result) {
+//     if (err) throw err;
+//     res.json(result)
+//   })
+// })
    
 
 // app.post('/login', (req, res) => {
