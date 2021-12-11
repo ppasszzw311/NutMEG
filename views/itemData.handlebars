@@ -35,9 +35,9 @@
           <label for="selectstore" class="form-label col-sm-3">選擇分店</label>
           <select class="form-select" name="store" id="store" aria-label="select example1">
             <option selected>選擇分店</option>
-            <option value="1">大安</option>
-            <option value="2">信義</option>
-            <option value="3">永和</option>
+            {{#each items}}
+              <option value="{{this.storeId}}">{{this.storeName}}</option>
+            {{/each}}
           </select>
         </div>
       </div>
@@ -61,55 +61,69 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+          {{#each items}}
+          <tr id="{{this.id}}">
+            <td>{{this.id}}</td>
+            <td>{{this.category}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.cost}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.inbound_unit}}</td>
+            <td>{{this.inbound_unit_count}}</td>
+            <td><input class="form-check-input" type="checkbox" value="{{this.use_yn}}" id="flexCheckDefault" checked>
+            <label class="form-check-label" for="flexCheckDefault">
+              使用
+            </label></td>
           </tr>
+          {{/each}}
         </tbody>
       </table>
     </div>
   </div>
 </div>
 </div>
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">新增商品</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="">
-          <div class="row">
-            <label for="">編號</label>
-            <input type="text" class="form-control">
+        <form action="/login" method="get">
+          <table class="table table-light table-stript table-hover text-center">
+            <thead>
+              <tr>
+                <th>類型</th>
+                <th>名稱</th>
+                <th>進價</th>
+                <th>售價</th>
+                <th>單位</th>
+                <th>進貨單位</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select name="" id="" class="form-control">
+                    <option value="1">檳榔</option>
+                    <option value="2">香菸</option>
+                    <option value="3">飲料</option>
+                  </select>
+                </td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+            <button class="btn btn-primary" type="submit">送出</button>
           </div>
-
-          <label for="">類型</label>
-          <select name="" id="">
-            <option value="1">檳榔</option>
-            <option value="2">香菸</option>
-            <option value="3">飲料</option>
-          </select>
-          <label for="">名稱</label>
-          <input type="text">
-          <label for="">名稱</label>
-          <input type="text"><label for="">名稱</label>
-          <input type="text"><label for="">名稱</label>
-          <input type="text"><label for="">名稱</label>
-          <input type="text"><label for="">名稱</label>
-          <input type="text">
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-        <button type="button" class="btn btn-primary">送出</button>
       </div>
     </div>

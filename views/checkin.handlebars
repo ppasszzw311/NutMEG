@@ -1,7 +1,8 @@
 <div class="container-md px-5 py-3 border border-4">
-  <div class="row">
-    <div class="col sm-8">
-      <p class="h4" id="datetime">日期時間:</p>
+  <p class="h2 text-center">打卡上班</p>
+  <div  class="row">
+    <div class="col sm-10">
+      <p class="h4 text-center" id="datetime">日期時間:</p>
     </div>
     <div class="col sm-2 d-flex justify-content-end">
       <a class="#" href="/">
@@ -10,14 +11,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-6">
-      <form method="post">
-        <div class="row px-2 py-1">
-          <p class="h3 text-center">值班班別</p>
-          <section class="row mb-4 d-flex">
-            <div class="card col-sm-4 text-center">
-              <label class="card-body px-2">
-                <h5 class="card-title">早班</h5>
+    <form method="post">
+      <div class="row px-2 py-1">
+        <p class="h3 text-center">值班班別</p>
+        <section class="row mb-4 d-flex">
+          <div class="card col-sm-4 text-center">
+            <label class="card-body px-2">
+              <h5 class="card-title">早班</h5>
                 <input type="radio" name="time" value="早班">
               </label>
             </div>
@@ -35,7 +35,7 @@
             </div>
           </section>
         </div>
-        <div class="row px-2 py-4">
+        {{!-- <div class="row px-2 py-4">
           <div class="col-sm-4 form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">
@@ -54,8 +54,8 @@
               加班下班
             </label>
           </div>
-        </div>
-        <div class="check2 py-2">
+        </div> --}}
+        {{!-- <div class="check2 py-2">
           <div class="input-group">
             <span class="input-group-text">加班日期</span><input type="date" class="form-control">
           </div>
@@ -66,10 +66,10 @@
             <option value="2">中班</option>
             <option value="3">晚班</option>
           </select>
-        </div>
+        </div> --}}
       </form>
     </div>
-    <div class="col-sm-6">
+    {{!-- <div class="col-sm-6">
       <div class="row" id="name">
         <p class="h2 col" id="numberid">員工編號：</p>
         <input type="text" class="form-control" id="id_input" placeholder="請輸入員工編號">
@@ -88,7 +88,7 @@
         <button type="button" class="btn btn-secondary">倒退</button>
         <button type="button" class="btn btn-secondary">刪除</button>
       </div>
-    </div>
+    </div> --}}
     <div class="row">
       <div class="d-flex justify-content-center" id="check3">
         <button type="button" class="btn btn-danger me-3" data-checkin="quit">取消</button>
